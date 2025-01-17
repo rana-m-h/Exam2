@@ -27,7 +27,7 @@ interface QuizAppProps {
    useEffect(() => {
     async function fetchQuiz() {
       try {
-        const response = await fetch( `http://localhost:3000/api/questions?exam=${quizeId}`); // Fetch data from API
+        const response = await fetch( `http://localhost:3000/api/questions?exam=${quizeId}`); 
         const payload = await response.json();
         console.log("response" , response)
 

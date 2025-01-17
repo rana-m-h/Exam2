@@ -44,15 +44,16 @@ export default function RegisterForm() {
         .string({ required_error: t("email-required") })
         .min(1, t("email-required"))
         .email(t("email-invalid")),
-      password: z
-        .string({ required_error: t("password-required") })
-        .min(1, t("password-required"))
-        .regex(/^(?=.*[a-z])(?=.*[A-Z]).{8,}$/, t("password-invalid")),
-        rePassword: z.string({ required_error: t("password-confirm-required") }).min(1, t("password-confirm-required")),
 
         phone:z 
+        .string({ required_error: t("phone-required") })
+        .min(1, t("phone-required")),
+
+      password: z
         .string({ required_error: t("password-required") })
-        .min(1, t("password-required"))
+        .min(1, t("password-required")),
+
+        rePassword: z.string({ required_error: t("password-confirm-required") }).min(1, t("password-confirm-required")),
     })
     .refine((values) => values.password === values.rePassword, {
       message: t("password-confirm-mismatch"),
@@ -204,6 +205,8 @@ export default function RegisterForm() {
             </FormItem>
           )}
         />
+        
+        {/* phone */}
         <FormField
           name="phone"
           control={form.control}

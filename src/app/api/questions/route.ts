@@ -21,10 +21,7 @@ const quizeId = searchParams.get("exam");
     },
   });
 
-console.log("res quiz",response)
-
  const payload = await response.json()
- console.log("payload quiz" , payload)
   return NextResponse.json(payload)
 
 }

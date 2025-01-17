@@ -28,7 +28,7 @@ export default function GetExams() {
   useEffect(() => {
     async function fetchExams() {
       try {
-        const response = await fetch( `http://localhost:3000/api/exams?subject=${examId}`); // Fetch data from API
+        const response = await fetch( `http://localhost:3000/api/exams?subject=${examId}`); 
         const payload = await response.json();
 
         if (!response.ok) {

@@ -47,7 +47,7 @@ export default function VervifyCodeForm() {
       form.reset();
       router.push("/auth/setNewPassword");
       return;
-    }else{console.log("erorr")}
+    }
 
     if (Array.isArray(response.message)) {
       response.message.forEach((error) => {

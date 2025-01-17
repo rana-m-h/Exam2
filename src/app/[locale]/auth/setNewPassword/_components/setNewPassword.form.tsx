@@ -48,7 +48,7 @@ export default function SetNewPasswordForm() {
      // If login was successful, redirect to the callback URL
       router.push("/auth/login");
       return;
-    }else{console.log("eroor")}
+    }
 
     if (Array.isArray(response.message)) {
       response.message.forEach((error) => {
@@ -85,7 +85,7 @@ export default function SetNewPasswordForm() {
         )}
       />
 
-     {/* Password */}
+     {/* newPassword */}
      <FormField
           name="newPassword"
           control={form.control}

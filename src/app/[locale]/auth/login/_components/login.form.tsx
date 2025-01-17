@@ -28,7 +28,7 @@ export default function LoginForm() {
 
   // Form & Validation
   const Schema = z.object({
-    email: z.string({ required_error: t("username-required") }).min(1, t("username-required")),
+    email: z.string({ required_error: t("email-required") }).min(1, t("email-required")),
     password: z.string({ required_error: t("password-required") }).min(1, t("password-required")),
   });
   type Inputs = z.infer<typeof Schema>;
@@ -63,10 +63,10 @@ export default function LoginForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="">
+      <form onSubmit={form.handleSubmit(onSubmit)}>
       <h3 className="text mt-3">Sign in</h3>
 
-        {/* Username */}
+        {/* email */}
         <FormField
           name="email"
           control={form.control}

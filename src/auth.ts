@@ -53,8 +53,6 @@ export const authOptions: NextAuthOptions = {
         });
 
 
-        console.log("API response", response)
-
         const payload: APIResponse<LoginResponse> = await response.json();
 
         // If login was successful, return the user data alongside the token
@@ -78,8 +76,6 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     jwt: ({ token, user }) => {
-      console.log("JWT callback invoked. User data:", user);
-
       if (user) {
        
         token.token = user.token;
