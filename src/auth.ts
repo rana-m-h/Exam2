@@ -70,7 +70,7 @@ export const authOptions: NextAuthOptions = {
         }
 
         // Otherwise, throw the error returned from the backend
-        throw new AppError(payload.message, payload.statusCode);
+        throw new AppError(payload.message, payload.code);
       },
     }),
   ],

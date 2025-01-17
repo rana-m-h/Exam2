@@ -1,4 +1,3 @@
-import LoginForm from "./auth/login/_components/login.form";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from "next/link";
@@ -26,10 +25,9 @@ export default function Page(){
         <div className="w-75">
           <div className="d-flex justify-content-end mb-5">
             <a href="#" className="me-3">English</a>
-            <Link className="me-3 " href={"/login"}>signin</Link>
+            <Link className="me-3 " href={"/auth/login"}>signin</Link>
             <Link href={"/auth/register"}>Register</Link>
           </div>
-          <LoginForm />
         </div>
       </div>
     </div>

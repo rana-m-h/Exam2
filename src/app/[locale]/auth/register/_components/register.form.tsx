@@ -238,25 +238,25 @@ export default function RegisterForm() {
               <div className="d-flex justify-content-center">
 
         <div
-          onClick={() => signIn("google", { callbackUrl: "/home" })}
+          onClick={() => signIn("google", { callbackUrl: "/dashboard/subjects" })}
           className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
         >
           <img width={20} height={20} alt="google" src={"/Logo Google.png"} />
         </div>
         <div
-          onClick={() => signIn("facebook", { callbackUrl: "/home" })}
+          onClick={() => signIn("facebook", { callbackUrl: "/dashboard/subjects" })}
           className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
         >
           <img width={20} height={20} alt="fasbook" src={"/Vector.png"} />
         </div>
         <div
-          onClick={() => signIn("twitter", { callbackUrl: "/home" })}
+          onClick={() => signIn("twitter", { callbackUrl: "/dashboard/subjects" })}
           className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
         >
           <img width={20} height={20} alt="twitter" src={"/Logo.png"} />
         </div>
         <div
-          onClick={() => signIn("github", { callbackUrl: "/home" })}
+          onClick={() => signIn("github", { callbackUrl: "/dashboard/subjects" })}
           className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
         >
           <img width={20} height={20} alt="Apple" src={"/Logo (1).png"} />
